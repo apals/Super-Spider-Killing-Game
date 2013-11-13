@@ -24,12 +24,12 @@ public class GamePlayAppState extends AbstractAppState implements PhysicsCollisi
     private final Node boxNode;
     private Node sceneNode;
     private Node playerNode;
-    // Factory creates creeps, towers
+    // Factory creates creeps
     Factory factory;
-    // timers reset laser beam visualizations and dispense player budget
+    
     private float timer_beam = 0f;
     private float timer_budget = 0f;
-    // player control manages player health and budget
+    // player control manages player health
     private int level = 0;
     private int score = 0;
     private float health = 0;
@@ -78,13 +78,7 @@ public class GamePlayAppState extends AbstractAppState implements PhysicsCollisi
         super.cleanup();
     }
 
-    /**
-     * ---------------------------------------------------------
-     */
-    /**
-     * Towers stand in two rows to the left and right of the positive z axis
-     * along the "tower-protected valley". They shoot beams at creeps.
-     */
+    
     public void addCrates(int numberOfCrates) {
         Geometry crate = null;
 
